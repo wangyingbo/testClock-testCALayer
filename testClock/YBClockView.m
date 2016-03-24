@@ -73,7 +73,7 @@
     NSInteger hour = date.hour;
     
     CGFloat perHourMove = 360.0 / 12.0;
-    CGFloat hourAngle = hour * perHourMove + minute * (1/60) *perHourMove;
+    CGFloat hourAngle = hour * perHourMove + minute * (1.0 / 60.0) *perHourMove;
     self.hourLayer.transform = CATransform3DMakeRotation(kAngleToRadion(hourAngle), 0, 0, 1);
     
     // 一分钟就是一圈，也就是每秒走度
