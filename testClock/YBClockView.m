@@ -72,7 +72,7 @@
     NSInteger minute = date.minute;
     NSInteger hour = date.hour;
     
-    CGFloat perHourMove = 1.0 / 2 * 360;
+    CGFloat perHourMove = 360.0 / 12.0;
     CGFloat hourAngle = hour * perHourMove + minute * (1/60) *perHourMove;
     self.hourLayer.transform = CATransform3DMakeRotation(kAngleToRadion(hourAngle), 0, 0, 1);
     
